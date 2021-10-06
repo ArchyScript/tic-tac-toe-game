@@ -1,0 +1,224 @@
+/**/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "sans serif";
+}
+
+a { text-decoration: none; }
+
+.container {
+  position: relative;
+}
+
+.game_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 5px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  background: hotpink;
+}
+
+.big_font_1 {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  font-family: cursive;
+}
+
+.big_font_2 {
+  font-size: .8rem;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.game_container header {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  background: lightpink;
+}
+
+.game_container header .section_1, .game_container header .section_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game_container header .section_1 > span, .game_container header .section_2 > span {
+  margin: .2rem auto;
+  padding: .2rem;
+  font-size: .7rem;
+  width: 100%;
+}
+
+.section_2 span {
+  border: .2px solid grey;
+  border-radius: 8px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.game_container main {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: .5rem auto;
+}
+
+.grid_container .grid_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 80px;
+  border: 1px solid grey;
+  background-image: linear-gradient(135deg, aqua 25%, skyblue 20%, pink 20%);
+}
+
+.grid_box.top_left { border-left: none; border-top: none; }
+.grid_box.top_middle { border-top: none; }
+.grid_box.top_right { border-top: none; border-right: none; }
+.grid_box.middle_left { border-left: none; }
+.grid_box.middle_right { border-right: none; }
+.grid_box.bottom_left { border-left: none; border-bottom: none; }
+.grid_box.bottom_middle { border-bottom: none; }
+.grid_box.bottom_right { border-bottom: none; border-right: none; }
+.grid_box.win {background: aqua; }
+
+.game_container footer {
+  margin: 1.2rem auto .5rem auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background: lightpink;
+  padding: 5px;
+  font-size: .7rem;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 2.5rem .5rem 1rem .5rem;
+  margin: auto;
+  border: .1px solid;
+  border-radius: 10px;
+  animation: animateModal 2s ease-in;
+  background: #111;
+  z-index: 2;
+  color: #eee;
+  display: none;
+}
+
+@keyframes animateModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#player_names {
+  display: block;
+  width: 80%;
+  max-width: 600px;
+}
+
+.player_row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  width: 90%;
+  padding: 10x;
+  margin: 10px auto;
+}
+
+.player_row label {
+  font-size: .7rem;
+}
+
+.player_row input {
+  font-size: .8rem;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  border-bottom: 5px solid aqua;
+  width: 100%;
+  background: pink;
+  font-weight: 800;
+}
+
+#set_player_name_btn {
+  grid-column: span 2;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  margin: 1rem auto ;
+  background: aqua;
+  border: 1px solid pink;
+}
+
+.close_modal_btn {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  padding: 2px 10px;
+  font-size: 1.2rem;
+  background: red;
+  color: #222;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.modal header {
+  background: #333;
+  padding: 4px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+.modal .instructions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal .instructions span {
+  width: 100%;
+  font-size: .8rem;
+  padding: 5px;
+  margin: 2px auto;
+}
+
+
+
+
+
+
+
+
+/**/

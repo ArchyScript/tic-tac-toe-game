@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="$home/$panel/views/styles/index.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="container"> 
+  <div class="game_container" id="game_container">
+    <header>
+      <div class="section_1">
+        <span id="player_one_score"></span>
+        <span id="player_two_score"></span>
+        <span id="players_turn"></span>
+       </div>
+      <div class="section_2">
+        <span id="reset_game_score_btn">Reset Score</span>
+        <span id="change_players_btn">Change Players </span>
+        <span id="about_game_btn">About</span>
+        <span id="exit_game_btn">Exit</span>
+      </div>
+      
+    </header>
+    <main class="grid_container">
+      <div class="grid_box top_left" id="top_left"></div>
+      <div class="grid_box top_middle" id="top_middle"></div>
+      <div class="grid_box top_right" id="top_right"></div>
+      <div class="grid_box middle_left" id="middle_left"></div>
+      <div class="grid_box middle_middle" id="middle_middle"></div>
+      <div class="grid_box middle_right" id="middle_right"></div>
+      <div class="grid_box bottom_left" id="bottom_left"></div>
+      <div class="grid_box bottom_middle" id="bottom_middle"></div>
+      <div class="grid_box bottom_right" id="bottom_right"></div>
+    </main>
+    <footer>
+       Copyright &copy; <a href="https://citonhub.com">Citonhub </a> JavascriptMiniProject 2021 
+    </footer> 
+ </div> 
+  <div id="player_names" class="modal">
+    <div class="player_row"> 
+      <label> Player 1 </label>
+      <input type="text" id="player_one_name" placeholder="Enter player 1 name">
+    </div>
+    <div class="player_row"> 
+      <label> Player 2 </label>
+      <input type="text" id="player_two_name" placeholder="Enter player 2 name">
+    </div>
+    <div class="player_row"> 
+      <button id="set_player_name_btn">Set Player Name</button>
+    </div>
+  </div>
+ <div class="modal" id="about_game">
+   <span id="close_about_game_btn" class="close_modal_btn">&times;</span>
+   <header> About Game </header>
+   <div class="instructions">
+     <span> This game is fun 🤗</span>
+     <span> There are 8 🎱 possible ways to win</span>
+     <span> Made with love 💖  </span>
+     <span> Play with friends and track the winner through the  score board</span>
+     <span> Enjoy and have fun 😋 </span>
+     <span> Leave a comment 👇, we love to see 👁️ from your angle </span>
+   </div>
+  </div>
+</div>
+
+
+  
+
+
+ <!-- includes application extensions-->
+ <extension></extension>
+
+ <!-- includes default javascript-->
+
+<script src="script.js"></script>
+  
+
+</body>
+</html>
